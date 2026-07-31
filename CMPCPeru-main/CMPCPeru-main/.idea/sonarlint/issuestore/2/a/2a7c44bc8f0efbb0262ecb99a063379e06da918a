@@ -1,0 +1,22 @@
+
+u
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(¿•öªùÿÿÿÿ
+o
+java:S2293ˆ"YReplace the type specification in this constructor call with the diamond operator ("<>").(ƒB
+o
+java:S2293Î"YReplace the type specification in this constructor call with the diamond operator ("<>").(ƒB
+F
+java:S1066ö"/Merge this if statement with the enclosing one.(Ô‘ŸÈ
+s
+java:S1488a"]Immediately return this expression instead of assigning it to the temporary variable "sheet".(ÛÎ¶ï
+d
+java:S2259$"I"NullPointerException" will be thrown when invoking method "readSheet()".(ÏÊÿ´ûÿÿÿÿ
+M	java:S106N"9Replace this use of System.out or System.err by a logger.(óîœ=
+d
+java:S1871§"MThis branch's code block is the same as the block for the branch on line 165.(íûŞê
+i
+java:S1871ª"MThis branch's code block is the same as the block for the branch on line 165.(‚×³¦ÿÿÿÿÿ
+i
+java:S1871¬"MThis branch's code block is the same as the block for the branch on line 165.(¶‚øÿÿÿÿ
+n
+java:S3776Í"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(Ø£Úóûÿÿÿÿ

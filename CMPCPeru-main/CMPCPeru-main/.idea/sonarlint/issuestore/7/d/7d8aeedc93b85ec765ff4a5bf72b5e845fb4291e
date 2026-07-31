@@ -1,0 +1,16 @@
+
+o
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ë†ÅŒ
+t
+java:S2293W"YReplace the type specification in this constructor call with the diamond operator ("<>").(²öÔËıÿÿÿÿ
+n	java:S135#"YReduce the total number of break and continue statements in this loop to use at most one.(Ù÷Âé
+2
+java:S16433"Use a StringBuilder instead.(ÇıÂË
+U
+java:S1118":Add a private constructor to hide the implicit public one.(®¯êôıÿÿÿÿ
+h
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(ŒÛ¬§
+O
+java:S4719"9Replace charset name argument with StandardCharsets.UTF_8(øÚŞÜ
+T
+java:S4719u"9Replace charset name argument with StandardCharsets.UTF_8(âÙşôùÿÿÿÿ

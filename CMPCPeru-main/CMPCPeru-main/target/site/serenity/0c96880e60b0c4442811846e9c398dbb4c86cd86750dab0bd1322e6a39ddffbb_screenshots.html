@@ -1,0 +1,339 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="041bee11a78ca488711aecc159f2eabcf2608acd5bc0b4773af1154770fdeb14.html">Fecha 16-02-2023-16:44 Pedido Por Mis Productos</a></span>
+                > <span class="truncate-60"><a
+                    href="0c96880e60b0c4442811846e9c398dbb4c86cd86750dab0bd1322e6a39ddffbb.html">: Pedido por mis productos </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 24-02-2023 08:56</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Fecha 16-02-2023-16:44 Pedido Por Mis Productos </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="f1e4a377d293c977efd33ccf29455210e6a9c138b8554a94ae28c4dfba3d1d39.html">Pedido Producto
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">: Pedido por mis productos
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Dado que el usuario se encuentra logueado &lt;url&gt; &lt;correo&gt; &lt;clave&gt;<br>Y en la opcion mis productos &lt;destinatario&gt;<br>Cuando el adicione los productos al carro para completar la informacion de pago &lt;producto&gt; &lt;cantidad&gt; &lt;segundoProducto&gt; &lt;segundaCantidad&gt; &lt;numeroOrdenCompra&gt; &lt;ObservacionOrdenCompra&gt;<br>Y consulte el pedido para cancelarlo<br>Entonces el visualizara un mensaje de Cancelado por cliente</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="df7d382ae93db49e46aaf29793d94a190a8cec87a0e7f72e0044835ec449f443.png" title=" 1: : Pedido por mis productos ({url=&quot;https://pe.cwgpxw02kj-empresasc1-s1-public.model-t.cc.commerce.ondemand.com/compraonline/login&quot;, correo=&quot;73615ripley@fdhecommerce.com.pe&quot;, clave=&quot;1234&quot;, destinatario=&quot;75997&quot;, producto=&quot;360374&quot;, cantidad=&quot;20&quot;, segundoProducto=&quot;361666&quot;, segundaCantidad=&quot;20&quot;, numeroOrdenCompra=&quot;OC del cliente oc1 - no despachar&quot;, ObservacionOrdenCompra=&quot;NO DESPACHAR TEST IT&quot;})" width="1366"/>
+                <img src="df7d382ae93db49e46aaf29793d94a190a8cec87a0e7f72e0044835ec449f443.png" title=" Dado que el usuario se encuentra logueado &quot;https://pe.cwgpxw02kj-empresasc1-s1-public.model-t.cc.commerce.ondemand.com/compraonline/login&quot; &quot;73615ripley@fdhecommerce.com.pe&quot; &quot;1234&quot;" width="1366"/>
+                <img src="df7d382ae93db49e46aaf29793d94a190a8cec87a0e7f72e0044835ec449f443.png" title=" Test opens the https://pe.cwgpxw02kj-empresasc1-s1-public.model-t.cc.commerce.ondemand.com/compraonline/login" width="1366"/>
+                <img src="baae3c693fdc2835f8a2cfb8c71a09ec175c793c7c6861c3d37e4b2dff08beaf.png" title=" Test iniciar sesion task" width="1366"/>
+                <img src="3d252ec934c21c38d2cfd4641dbf077a7837a0829450a954efcd6fe2001e4bed.png" title=" Test espera implicita" width="1366"/>
+                <img src="3d252ec934c21c38d2cfd4641dbf077a7837a0829450a954efcd6fe2001e4bed.png" title=" Test espera implicita (completed)" width="1366"/>
+                <img src="3d252ec934c21c38d2cfd4641dbf077a7837a0829450a954efcd6fe2001e4bed.png" title=" Test enters '73615ripley@fdhecommerce.com.pe' into Credenciales de Correo" width="1366"/>
+                <img src="b929c55314e56a674f080c33b5bb35a3163351840e3c2d787c5ba1313de11e3f.png" title=" Test enters '73615ripley@fdhecommerce.com.pe' into Credenciales de Correo" width="1366"/>
+                <img src="b929c55314e56a674f080c33b5bb35a3163351840e3c2d787c5ba1313de11e3f.png" title=" Test enters '73615ripley@fdhecommerce.com.pe' into Credenciales de Correo (completed)" width="1366"/>
+                <img src="b929c55314e56a674f080c33b5bb35a3163351840e3c2d787c5ba1313de11e3f.png" title=" Test enters '1234' into Credenciales de clave" width="1366"/>
+                <img src="99df5f98d53626b8ec79cde9bcdbcc805c7a3d8465cd788cff32f7d9b10442a4.png" title=" Test enters '1234' into Credenciales de clave" width="1366"/>
+                <img src="99df5f98d53626b8ec79cde9bcdbcc805c7a3d8465cd788cff32f7d9b10442a4.png" title=" Test enters '1234' into Credenciales de clave (completed)" width="1366"/>
+                <img src="99df5f98d53626b8ec79cde9bcdbcc805c7a3d8465cd788cff32f7d9b10442a4.png" title=" Test clicks on Boton Ingresar" width="1366"/>
+                <img src="31860d95434a2487b2957e0032848099fcfa770ebdd32f5ed573e073b18f64e3.png" title=" Test clicks on Boton Ingresar" width="1366"/>
+                <img src="31860d95434a2487b2957e0032848099fcfa770ebdd32f5ed573e073b18f64e3.png" title=" Test clicks on Boton Ingresar (completed)" width="1366"/>
+                <img src="31860d95434a2487b2957e0032848099fcfa770ebdd32f5ed573e073b18f64e3.png" title=" Test espera implicita" width="1366"/>
+                <img src="106b2cfd8ac1419dbf5a497ea74ea4d4874ca65071cfafcb818aea30a14ce0cf.png" title=" Test espera implicita (completed)" width="1366"/>
+                <img src="67217fcd2428423ac62ab729a9391cf593814d4a3d86251008e5d2ecaeb252d7.png" title=" Test iniciar sesion task (completed)" width="1366"/>
+                <img src="f3589e00fc1bf56da883e9fd79b28435cad429ecc9180610743ea74ba4042676.png" title=" Dado que el usuario se encuentra logueado &quot;https://pe.cwgpxw02kj-empresasc1-s1-public.model-t.cc.commerce.ondemand.com/compraonline/login&quot; &quot;73615ripley@fdhecommerce.com.pe&quot; &quot;1234&quot; (completed)" width="1366"/>
+                <img src="f3589e00fc1bf56da883e9fd79b28435cad429ecc9180610743ea74ba4042676.png" title=" Y en la opcion mis productos &quot;75997&quot;" width="1366"/>
+                <img src="0a0c58a90803352592f839fdd6082bf5422ab79e7c74a88aa0d23b6494c2b8c7.png" title=" Test destinatario task" width="1366"/>
+                <img src="0a0c58a90803352592f839fdd6082bf5422ab79e7c74a88aa0d23b6494c2b8c7.png" title=" Test enters '75997' into Barra de texto para buscar destinatario" width="1366"/>
+                <img src="d5be8133760a0cb60736d2ac0351f56b333ba5241a32a8c7d231fa1f6ad427cf.png" title=" Test enters '75997' into Barra de texto para buscar destinatario" width="1366"/>
+                <img src="e09a808d1c7f3f6b565760b5a7a8c254dc7560a7ce0e5cd7768c6ee16377dc5b.png" title=" Test enters '75997' into Barra de texto para buscar destinatario (completed)" width="1366"/>
+                <img src="e09a808d1c7f3f6b565760b5a7a8c254dc7560a7ce0e5cd7768c6ee16377dc5b.png" title=" Test clicks on Boton Seleccionar destinatario" width="1366"/>
+                <img src="0c3e55d928e407094f68f9fe77a927ba34e4c10057ea7e5e8e0779803609ccd4.png" title=" Test clicks on Boton Seleccionar destinatario" width="1366"/>
+                <img src="0c3e55d928e407094f68f9fe77a927ba34e4c10057ea7e5e8e0779803609ccd4.png" title=" Test clicks on Boton Seleccionar destinatario (completed)" width="1366"/>
+                <img src="87fbc3130d2aa59a5f86b53cdb85c652af39a6c97574690d9821f628bb0a5852.png" title=" Test clicks on Boton cambiar tipo de destinatario" width="1366"/>
+                <img src="66362e109bef835b5b60c81d713b15614f4cfaf79e2c8dd051ab19acea87b679.png" title=" Test clicks on Boton cambiar tipo de destinatario" width="1366"/>
+                <img src="66362e109bef835b5b60c81d713b15614f4cfaf79e2c8dd051ab19acea87b679.png" title=" Test clicks on Boton cambiar tipo de destinatario (completed)" width="1366"/>
+                <img src="66362e109bef835b5b60c81d713b15614f4cfaf79e2c8dd051ab19acea87b679.png" title=" Test destinatario task (completed)" width="1366"/>
+                <img src="d1b73777d582303d28d1d4ff9531e623841c3c049667c676004fd435e0f6374f.png" title=" Test mis productos task" width="1366"/>
+                <img src="ef0e146f4c2cc8a883904e40628b7a8c85f598557e0efe7349edc4cf18829519.png" title=" Test clicks on Click en mis Productos" width="1366"/>
+                <img src="722b63265441d27096eb8ad472309460725be93320c7573379965b1f23066ea2.png" title=" Test clicks on Click en mis Productos" width="1366"/>
+                <img src="722b63265441d27096eb8ad472309460725be93320c7573379965b1f23066ea2.png" title=" Test clicks on Click en mis Productos (completed)" width="1366"/>
+                <img src="722b63265441d27096eb8ad472309460725be93320c7573379965b1f23066ea2.png" title=" Test mis productos task (completed)" width="1366"/>
+                <img src="722b63265441d27096eb8ad472309460725be93320c7573379965b1f23066ea2.png" title=" Y en la opcion mis productos &quot;75997&quot; (completed)" width="1366"/>
+                <img src="722b63265441d27096eb8ad472309460725be93320c7573379965b1f23066ea2.png" title=" Cuando el adicione los productos al carro para completar la informacion de pago &quot;360374&quot; &quot;20&quot; &quot;361666&quot; &quot;20&quot; &quot;OC del cliente oc1 - no despachar&quot; &quot;NO DESPACHAR TEST IT&quot;" width="1366"/>
+                <img src="722b63265441d27096eb8ad472309460725be93320c7573379965b1f23066ea2.png" title=" Test validar campos vacios" width="1366"/>
+                <img src="722b63265441d27096eb8ad472309460725be93320c7573379965b1f23066ea2.png" title=" Test validar campos vacios (completed)" width="1366"/>
+                <img src="722b63265441d27096eb8ad472309460725be93320c7573379965b1f23066ea2.png" title=" Test agregar producto task" width="1366"/>
+                <img src="722b63265441d27096eb8ad472309460725be93320c7573379965b1f23066ea2.png" title=" Test enters '20' into Barra de texto cantidad producto" width="1366"/>
+                <img src="f3981f80028a05e9976b78153f76abdaf237837b41d65ffae6cf31c14b477779.png" title=" Test enters '20' into Barra de texto cantidad producto" width="1366"/>
+                <img src="f3981f80028a05e9976b78153f76abdaf237837b41d65ffae6cf31c14b477779.png" title=" Test enters '20' into Barra de texto cantidad producto (completed)" width="1366"/>
+                <img src="f3981f80028a05e9976b78153f76abdaf237837b41d65ffae6cf31c14b477779.png" title=" Test enters '20' into Barra de texto cantidad producto" width="1366"/>
+                <img src="a2d56d17617418fa0910263ab8a249990bc0b3c19060b049044c6e3e583c8e3a.png" title=" Test enters '20' into Barra de texto cantidad producto" width="1366"/>
+                <img src="a2d56d17617418fa0910263ab8a249990bc0b3c19060b049044c6e3e583c8e3a.png" title=" Test enters '20' into Barra de texto cantidad producto (completed)" width="1366"/>
+                <img src="a2d56d17617418fa0910263ab8a249990bc0b3c19060b049044c6e3e583c8e3a.png" title=" Test clicks on Boton agregar carrito" width="1366"/>
+                <img src="a20865db9b8cb479c3b7d195fde16562f653f69c9817fab9e39e1684c0e31377.png" title=" Test clicks on Boton agregar carrito (completed)" width="1366"/>
+                <img src="a20865db9b8cb479c3b7d195fde16562f653f69c9817fab9e39e1684c0e31377.png" title=" Test clicks on Boton Revisar Carrito" width="1366"/>
+                <img src="0730182aface4472761cf61b996d406267f8da5df63f4b171864a4f9dc5b928d.png" title=" Test clicks on Boton Revisar Carrito" width="1366"/>
+                <img src="0730182aface4472761cf61b996d406267f8da5df63f4b171864a4f9dc5b928d.png" title=" Test clicks on Boton Revisar Carrito (completed)" width="1366"/>
+                <img src="0730182aface4472761cf61b996d406267f8da5df63f4b171864a4f9dc5b928d.png" title=" Test agregar producto task (completed)" width="1366"/>
+                <img src="0730182aface4472761cf61b996d406267f8da5df63f4b171864a4f9dc5b928d.png" title=" Test orden task" width="1366"/>
+                <img src="0730182aface4472761cf61b996d406267f8da5df63f4b171864a4f9dc5b928d.png" title=" Test clicks on Boton para terminar con mi pedido" width="1366"/>
+                <img src="5c9a2099fade97d78ee85623e87b426fd291fead31726054c155907593319a0e.png" title=" Test clicks on Boton para terminar con mi pedido" width="1366"/>
+                <img src="5c9a2099fade97d78ee85623e87b426fd291fead31726054c155907593319a0e.png" title=" Test clicks on Boton para terminar con mi pedido (completed)" width="1366"/>
+                <img src="5c9a2099fade97d78ee85623e87b426fd291fead31726054c155907593319a0e.png" title=" Test enters 'OC del cliente oc1 - no despachar' into Barra de texto numero de orden" width="1366"/>
+                <img src="df992cdbb0b25edd76463c767e0464ae8c4de42daaf8c0a8b7587c2db9e0f01e.png" title=" Test enters 'OC del cliente oc1 - no despachar' into Barra de texto numero de orden" width="1366"/>
+                <img src="df992cdbb0b25edd76463c767e0464ae8c4de42daaf8c0a8b7587c2db9e0f01e.png" title=" Test enters 'OC del cliente oc1 - no despachar' into Barra de texto numero de orden (completed)" width="1366"/>
+                <img src="df992cdbb0b25edd76463c767e0464ae8c4de42daaf8c0a8b7587c2db9e0f01e.png" title=" Test enters 'NO DESPACHAR TEST IT' into Barra de texto observacion" width="1366"/>
+                <img src="34939f307e447e0eac71143fc4b2d0d28a376ca3c25bde976e8d35d0e068bbb9.png" title=" Test enters 'NO DESPACHAR TEST IT' into Barra de texto observacion" width="1366"/>
+                <img src="34939f307e447e0eac71143fc4b2d0d28a376ca3c25bde976e8d35d0e068bbb9.png" title=" Test enters 'NO DESPACHAR TEST IT' into Barra de texto observacion (completed)" width="1366"/>
+                <img src="34939f307e447e0eac71143fc4b2d0d28a376ca3c25bde976e8d35d0e068bbb9.png" title=" Test clicks on Radio Buton acepto terminos y condiciones" width="1366"/>
+                <img src="8266948932a3bc7ee26f304e1840858d56def33de30e4bac4cb7175db4149365.png" title=" Test clicks on Radio Buton acepto terminos y condiciones" width="1366"/>
+                <img src="8266948932a3bc7ee26f304e1840858d56def33de30e4bac4cb7175db4149365.png" title=" Test clicks on Radio Buton acepto terminos y condiciones (completed)" width="1366"/>
+                <img src="2c93ef534f56bf065740c4c4d4ecaa7bc70df8e5d6f3773d7f822ab854145e21.png" title=" Test clicks on Boton seleccionar fecha calendario" width="1366"/>
+                <img src="1e1bf280c0b8b9f6480a317e0cb2e7e7fb6c6abaee439f962de13b0190e0134d.png" title=" Test clicks on Boton seleccionar fecha calendario" width="1366"/>
+                <img src="1e1bf280c0b8b9f6480a317e0cb2e7e7fb6c6abaee439f962de13b0190e0134d.png" title=" Test clicks on Boton seleccionar fecha calendario (completed)" width="1366"/>
+                <img src="2e9458c1564f323837547f21e859b5f6154432fb75ea1df66dc28065056c5285.png" title=" Test clicks on Boton siguiente mes" width="1366"/>
+                <img src="dd9750752180da970fe9345f1cf29d54390bf45114477b7467616b3af73844c3.png" title=" Test clicks on Boton siguiente mes" width="1366"/>
+                <img src="dd9750752180da970fe9345f1cf29d54390bf45114477b7467616b3af73844c3.png" title=" Test clicks on Boton siguiente mes (completed)" width="1366"/>
+                <img src="dd9750752180da970fe9345f1cf29d54390bf45114477b7467616b3af73844c3.png" title=" Test espera implicita" width="1366"/>
+                <img src="dd9750752180da970fe9345f1cf29d54390bf45114477b7467616b3af73844c3.png" title=" Test espera implicita (completed)" width="1366"/>
+                <img src="dd9750752180da970fe9345f1cf29d54390bf45114477b7467616b3af73844c3.png" title=" Test seleccionar fecha" width="1366"/>
+                <img src="fa448414b7b11125bf53a6693b64d92856e83c7d58b37913cea7d965e65318b7.png" title=" Test seleccionar fecha" width="1366"/>
+                <img src="fa448414b7b11125bf53a6693b64d92856e83c7d58b37913cea7d965e65318b7.png" title=" Test seleccionar fecha (completed)" width="1366"/>
+                <img src="8673dbd2c66a3e03502829475ce68b2d298a6caab065e79c86c585f3630202be.png" title=" Test clicks on Boton Realizar Pedidos" width="1366"/>
+                <img src="58d4540523af64a78e29658d0c04fed441927d76a105cbc84b542aaaa0ab4e55.png" title=" Test clicks on Boton Realizar Pedidos" width="1366"/>
+                <img src="58d4540523af64a78e29658d0c04fed441927d76a105cbc84b542aaaa0ab4e55.png" title=" Test clicks on Boton Realizar Pedidos (completed)" width="1366"/>
+                <img src="58d4540523af64a78e29658d0c04fed441927d76a105cbc84b542aaaa0ab4e55.png" title=" Test orden task (completed)" width="1366"/>
+                <img src="58d4540523af64a78e29658d0c04fed441927d76a105cbc84b542aaaa0ab4e55.png" title=" Cuando el adicione los productos al carro para completar la informacion de pago &quot;360374&quot; &quot;20&quot; &quot;361666&quot; &quot;20&quot; &quot;OC del cliente oc1 - no despachar&quot; &quot;NO DESPACHAR TEST IT&quot; (completed)" width="1366"/>
+                <img src="58d4540523af64a78e29658d0c04fed441927d76a105cbc84b542aaaa0ab4e55.png" title=" Y consulte el pedido para cancelarlo" width="1366"/>
+                <img src="58d4540523af64a78e29658d0c04fed441927d76a105cbc84b542aaaa0ab4e55.png" title=" Test cancelar pedido task" width="1366"/>
+                <img src="58d4540523af64a78e29658d0c04fed441927d76a105cbc84b542aaaa0ab4e55.png" title=" Test clicks on Boton ubicar ordenes para elegir" width="1366"/>
+                <img src="01c26bb6285daf6b832bd675597070419185c7d9ff8cc9f094f8ad53f0057530.png" title=" Test clicks on Boton ubicar ordenes para elegir" width="1366"/>
+                <img src="01c26bb6285daf6b832bd675597070419185c7d9ff8cc9f094f8ad53f0057530.png" title=" Test clicks on Boton ubicar ordenes para elegir (completed)" width="1366"/>
+                <img src="1b8c460f26bbec4a618c79e1399e655fc63ff6046c2885b090c1020550133a77.png" title=" Test cancelar pedido" width="1366"/>
+                <img src="be8583d0e65e864fd9d101836b35a7d70d33d12c8c3860b03e42595ee740bc57.png" title=" Test cancelar pedido (completed)" width="1366"/>
+                <img src="ac0352142a3ab14437c600bb09d9ab52bd02695cde5ced428ed9f8bc618b1f64.png" title=" Test clicks on boton para cancelar el pedido de segundo estado" width="1366"/>
+                <img src="e52a594fa80692fea99ebe64a9fcd9cb9e4b22a492b0351a05a8593bb886cd2e.png" title=" Test clicks on boton para cancelar el pedido de segundo estado" width="1366"/>
+                <img src="e52a594fa80692fea99ebe64a9fcd9cb9e4b22a492b0351a05a8593bb886cd2e.png" title=" Test clicks on boton para cancelar el pedido de segundo estado (completed)" width="1366"/>
+                <img src="e52a594fa80692fea99ebe64a9fcd9cb9e4b22a492b0351a05a8593bb886cd2e.png" title=" Test clicks on Boton para aceptar la cancelacion del pedido de segundo estado" width="1366"/>
+                <img src="a0fc1a1af0e46eb977b819c29ab9dff22efddba4602c1fed9f0d4b37b8362a76.png" title=" Test clicks on Boton para aceptar la cancelacion del pedido de segundo estado" width="1366"/>
+                <img src="a0fc1a1af0e46eb977b819c29ab9dff22efddba4602c1fed9f0d4b37b8362a76.png" title=" Test clicks on Boton para aceptar la cancelacion del pedido de segundo estado (completed)" width="1366"/>
+                <img src="fe022d3b79b9c32277e9920a9277afaea5c7c8a68d0d492a499601508dc41078.png" title=" Test espera explicita" width="1366"/>
+                <img src="818d10da1abe959f58ae5ea29bc3187c15f3f78983908d6bad3578b4c591b349.png" title=" Test espera explicita (completed)" width="1366"/>
+                <img src="905660c35ba55dc388166b8089697219ea985f19c41f1de6d932e8c5c8b91c89.png" title=" Test espera explicita" width="1366"/>
+                <img src="3bfc78a8bfefc5a2607a97f7cbf03879a1cfdff431a23e0ee1fb400eb074f174.png" title=" Test espera explicita (completed)" width="1366"/>
+                <img src="3bfc78a8bfefc5a2607a97f7cbf03879a1cfdff431a23e0ee1fb400eb074f174.png" title=" Test cancelar pedido task (completed)" width="1366"/>
+                <img src="3bfc78a8bfefc5a2607a97f7cbf03879a1cfdff431a23e0ee1fb400eb074f174.png" title=" Then No se visualiza el pedido should be (true)" width="1366"/>
+                <img src="3bfc78a8bfefc5a2607a97f7cbf03879a1cfdff431a23e0ee1fb400eb074f174.png" title=" Then No se visualiza el pedido should be (true) (completed)" width="1366"/>
+                <img src="3bfc78a8bfefc5a2607a97f7cbf03879a1cfdff431a23e0ee1fb400eb074f174.png" title=" Then No se visualiza el Estado should be (true)" width="1366"/>
+                <img src="3bfc78a8bfefc5a2607a97f7cbf03879a1cfdff431a23e0ee1fb400eb074f174.png" title=" Then No se visualiza el Estado should be (true) (completed)" width="1366"/>
+                <img src="3bfc78a8bfefc5a2607a97f7cbf03879a1cfdff431a23e0ee1fb400eb074f174.png" title=" Y consulte el pedido para cancelarlo (completed)" width="1366"/>
+                <img src="3bfc78a8bfefc5a2607a97f7cbf03879a1cfdff431a23e0ee1fb400eb074f174.png" title=" Entonces el visualizara un mensaje de Cancelado por cliente" width="1366"/>
+                <img src="3bfc78a8bfefc5a2607a97f7cbf03879a1cfdff431a23e0ee1fb400eb074f174.png" title=" Entonces el visualizara un mensaje de Cancelado por cliente (completed)" width="1366"/>
+                <img src="3bfc78a8bfefc5a2607a97f7cbf03879a1cfdff431a23e0ee1fb400eb074f174.png" title=" 1: : Pedido por mis productos ({url=&quot;https://pe.cwgpxw02kj-empresasc1-s1-public.model-t.cc.commerce.ondemand.com/compraonline/login&quot;, correo=&quot;73615ripley@fdhecommerce.com.pe&quot;, clave=&quot;1234&quot;, destinatario=&quot;75997&quot;, producto=&quot;360374&quot;, cantidad=&quot;20&quot;, segundoProducto=&quot;361666&quot;, segundaCantidad=&quot;20&quot;, numeroOrdenCompra=&quot;OC del cliente oc1 - no despachar&quot;, ObservacionOrdenCompra=&quot;NO DESPACHAR TEST IT&quot;}) (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.2.0</span>
+</div>
+</body>
+</html>
